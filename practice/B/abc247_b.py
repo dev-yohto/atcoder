@@ -1,7 +1,7 @@
 N = int(input())
 A = []
 
-for i in range(N):
+for _ in range(N):
     full_name = input().split()
     A.append(full_name)
 
