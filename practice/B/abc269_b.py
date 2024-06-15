@@ -1,9 +1,6 @@
 S = [input() for _ in range(10)]
 
-A = 0
-B = 0
-C = 0
-D = 0
+A = B = C = D = 0
 
 for i in range(10):
     if "#" in S[i]:
