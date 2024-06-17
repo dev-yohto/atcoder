@@ -12,16 +12,18 @@ ans = {}
 for i in range(Q):
     found = False
     for j in range(N):
-        for k in range(M):
-            for l in range(L):
-                if A[j] + B[k] + C[l] == X[i]:
-                    ans[i] = "Yes"
-                    found = True
-                    break
+        if X[i] >= A[j]:
+            for k in range(M):
+                if X[i] >= A[j] + B[k]:
+                    for l in range(L):
+                        if A[j] + B[k] + C[l] == X[i]:
+                            ans[i] = "Yes"
+                            found = True
+                            break
+                    if found:
+                        break
             if found:
                 break
-        if found:
-            break
     if not found:
         ans[i] = "No"
 
